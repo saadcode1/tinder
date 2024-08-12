@@ -1,0 +1,46 @@
+<% layout('boilerplate') -%>
+
+<body>
+    <div class="container col-6">
+    <form class="form-control needs-validation" method="POST" action="/fetch/add/posted" novalidate>
+    <label for="name">Name
+    </label>
+    <input class="form-control" id="name" name="name" placeholder="Enter Name" required/>
+    <div class="valid-feedback">
+        Looks good!
+      </div>
+    <br>
+    <label for="iamge">Image
+    </label>
+    <input class="form-control" id="image" name="image" placeholder="Enter image URL" required/>
+    <div class="invalid-feedback">
+        enter valid image URL!
+      </div>
+    <br>
+    <label for="Description">Description
+    </label>
+    <input class="form-control" id="description" name="description" placeholder="Enter Description" required/>
+    <div class="invalid-feedback">
+        enter valid description!
+      </div>
+    <br>
+    <label for="location">location
+    </label>
+    <input class="form-control" id="location" name="location" placeholder="Enter Location" required/>
+    <div class="invalid-feedback">
+        please enter valid location!
+      </div>
+    <br>
+    <label for="country">Country
+    </label>
+    <input class="form-control" id="country" name="country" placeholder="Enter Country" required/>
+    <div class="invalid-feedback">
+please fill valid country 
+      </div>
+    <br>
+    <button>Add</button>
+</div>
+</form>
+<script src="./js/script.js">
+ </script>
+</body>

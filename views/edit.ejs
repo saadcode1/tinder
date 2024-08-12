@@ -1,0 +1,9 @@
+<% layout('boilerplate') -%>
+    <form method="post" action="/fetch/add/<%=data._id%>?_method=PUT" class="form-control">
+    <input name="data[name]" value="<%=data.name%>" placeholder="Editable data"/>
+    <input name="data[desciption]" value="<%=data.description%>" placeholder="Editable data"/>
+    <input name="data[image]" value="<%=data.image%>" placeholder="Editable data"/>
+    <input name="data[location]" value="<%=data.location%>" placeholder="Editable data"/>
+    <input name="data[country]" value="<%=data.country%>" placeholder="Editable data"/>
+    <button>Edit</button>
+    </form>

@@ -1,0 +1,39 @@
+<% layout('boilerplate') -%>
+ <div class="gsap1">
+    <h1>Find One Parmanent</h1>
+    <% if (item) { %>
+        <image class="image" src="<%= item.image %>" alt=""/>
+          <hr/>
+          <b><p>Name: <%= item.name %></p></b>
+          <p>Location: <%= item.location %></p>
+          <p>Country: <%= item.country %></p>
+          <hr/>
+        <p>Description: <%= item.description %></p>
+      <% } else { %>
+        <p>No item fetched yet. Click the button to fetch an item.</p>
+      <% } %>
+      <button style="border: none;border-radius: 4px" class="btn-danger bg-danger"><a style="text-decoration: none;color:white" href="/fetch">click to change</a></button>
+      <button style="border: none;border-radius: 4px" class="btn-danger bg-danger"><a style="text-decoration: none;color:white" href="/fetch/add/<%=item._id%>">Edit</a></button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      
+  let tl=gsap.timeline();
+
+tl.from(".gsap1 .image",{
+y:-300,
+opacity:0,
+duration:0.5,
+delay:0.2
+});
+tl.from(".gsap1 p",{
+y:-30,
+opacity:0,
+duration:0.5,
+delay:0.3,
+stagger:0.3
+});
+
+    </script>
+
